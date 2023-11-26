@@ -16,12 +16,14 @@
         </h1>
 
         <table class="table table-striped">
-            <thead>
+            <thead class="text-capitalize">
                 <tr>
                     <th>id</th>
                     <th>name</th>
                     <th>email</th>
                     <th>age</th>
+                    <th>update</th>
+                    <th>delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +44,16 @@
                                     <td>{$row['name']}</td>
                                     <td>{$row['email']}</td>
                                     <td>{$row['age']}</td>
+                                    <td>
+                                        <a href='./update-form.php?id={$row['id']}' class='btn btn-primary'>
+                                            Update
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href='./delete.php?id={$row['id']}' class='btn btn-danger'>
+                                            Delete
+                                        </a>
+                                    </td>
                                 </tr>
                             ";
                             

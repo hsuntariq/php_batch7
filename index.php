@@ -8,6 +8,20 @@
     <title>Get Data</title>
 </head>
 <body>
+
+
+        <?php
+            // session_start();
+            if(isset($_SESSION['success'])){
+                echo "
+                    <div class='w-25 bg-info text-white'>
+                        {$_SESSION['success']}
+                    </div>
+                ";
+            }
+        ?>
+
+
         <a href="./show-data.php" class="btn btn-info">
             Show Data
         </a>
